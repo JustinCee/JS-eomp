@@ -103,13 +103,12 @@ input[type="submit"]:hover {
   text-align: center;
   font-size: 16px;
   color: #666666;
-}
-
-.signup_link a {
   color: #2691d9;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
-.signup_link a:hover {
+.signup_link:hover {
   text-decoration: underline;
 }

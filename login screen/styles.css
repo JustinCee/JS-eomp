@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(https://picsum.photos/id/1080/1800);
+  background: url(https://picsum.photos/id/1080/1900);
   object-fit: cover;
   height: 100vh;
   overflow: hidden;
@@ -101,4 +101,13 @@ input[type="submit"]:hover {
   text-align: center;
   font-size: 16px;
   color: #666666;
+}
+
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.signup_link a:hover {
+  text-decoration: underline;
 }
