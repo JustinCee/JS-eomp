@@ -1,8 +1,8 @@
-fetch("https://boiling-plains-09363.herokuapp.com/show-products/")
+fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-    renderProducts(data);
+    showProducts(data);
   });
 
 function showProducts(products) {
@@ -14,8 +14,8 @@ function showProducts(products) {
             <img src="${product.image}" class="product-image">
             <h4 class="product-title">${product.title}</h4>
             <p class="product-cat">${product.category}</p>
-            <p class="product-quan">${product.quantity}</p>
-            <p class="product-cost">${product.cost}</p>
+            <p class="product-quan">${product.description}</p>
+            <p class="product-cost">${product.price}</p>
     `;
   });
 }
