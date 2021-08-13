@@ -16,6 +16,12 @@
       <h1>Welcome to our products</h1>
       <button id="myBtn">Add Products</button>
     </div>
+    <div id="filters">
+      <form onsubmit="event.preventDefault(); searchProduct();">
+        <input type="text" required id="searchItem" />
+        <button type="submit"></button>
+      </form>
+    </div>
     <!-- Trigger/Open The Modal -->
 
     <!-- The Modal -->

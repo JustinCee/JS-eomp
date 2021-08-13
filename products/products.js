@@ -1,5 +1,6 @@
 let products = [];
 let cart = [];
+console.log(cart);
 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
@@ -27,7 +28,12 @@ function showProducts(products) {
 }
 
 function addToCart(id) {
-  let product = products.find();
+  let product = products.find((item) => {
+    return item.id == id;
+  });
+  console.log(product);
+  cart.push(product);
+  console.log("These items are in your Cart: ", cart);
 }
 
 // Get the modal
