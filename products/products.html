@@ -6,39 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justin Calvert Products</title>
     <link rel="stylesheet" href="products.css" />
+    <script
+      src="https://kit.fontawesome.com/674498e59a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="header">
       <h1>Welcome to our products</h1>
+      <button id="myBtn">Add Products</button>
     </div>
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Add Products</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h3>Fill in the fields below to add a Product</h3>
-        <div class="text_area">
-          <input type="text" required />
-          <span></span>
-          <label>Title of Product</label>
-        </div>
-        <div class="text_area">
-          <input type="text" required />
-          <span></span>
-          <label>Product Category</label>
-        </div>
-        <div class="text_area">
-          <input type="number" required />
-          <span></span>
-          <label>Product Quantity</label>
-        </div>
-        <div class="text_area">
-          <input type="number" required />
-          <span></span>
-          <label>Cost of Product</label>
+        <span class="close"><i class="fas fa-door-open"></i></span>
+        <div class="center">
+          <h1>Fill in the fields below to add a Product</h1>
+          <form
+            action="https://boiling-plains-09363.herokuapp.com/adding-items/"
+            method="GET"
+            id="form"
+          >
+            <div class="text_area">
+              <input type="text" required />
+              <span></span>
+              <label>Product Title</label>
+            </div>
+            <div class="text_area">
+              <input type="text" required />
+              <span></span>
+              <label>Product Category</label>
+            </div>
+            <div class="text_area">
+              <input type="number" required />
+              <span></span>
+              <label>Product Quantity</label>
+            </div>
+            <div class="text_area">
+              <input type="number" required />
+              <span></span>
+              <label>Product Cost</label>
+            </div>
+            <input type="submit" value="Add Product" />
+          </form>
         </div>
       </div>
     </div>
