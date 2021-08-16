@@ -29,6 +29,7 @@ function showProducts(products) {
 
 function showCart(productItems) {
   let cartContainer = document.querySelector("#cart");
+  cartContainer.innerHTML = "";
   if (productItems.length > 0) {
     productItems.map((productItem) => {
       cartContainer.innerHTML += `
@@ -41,6 +42,9 @@ function showCart(productItems) {
         </div>    
     `;
     });
+    let sumPrice = productItems.reduce((total, item) => total + item.price, 0);
+    console.log(sumPrice);
+    cartContainer.innerHTML += `<h3>The Price will be: ${sumPrice}</h3>`;
   } else {
     cartContainer.innerHTML = "<h3>Cart is empty</h3>";
   }
