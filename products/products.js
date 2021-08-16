@@ -27,13 +27,34 @@ function showProducts(products) {
   });
 }
 
+function showCart(productItems) {
+  let cartContainer = document.querySelector("#cart");
+  if (productItems.length > 0) {
+    productItems.map((productItem) => {
+      cartContainer.innerHTML += `
+        <div class="product">
+            <img src="${productItem.image}" class="product-image">
+            <h4 class="product-title">${productItem.title}</h4>
+            <p class="product-cat">${productItem.category}</p>
+            <p class="product-quan">${productItem.description}</p>
+            <p class="product-cost">${productItem.price}</p>
+        </div>    
+    `;
+    });
+  } else {
+    cartContainer.innerHTML = "<h3>Cart is empty</h3>";
+  }
+}
+
 function addToCart(id) {
   let product = products.find((item) => {
     return item.id == id;
   });
   console.log(product);
   cart.push(product);
+
   console.log("These items are in your Cart: ", cart);
+  showCart(cart);
 }
 
 function searchProduct() {
@@ -51,6 +72,10 @@ function searchProduct() {
   } else {
     showProducts(foundProducts);
   }
+}
+
+function openCart() {
+  document.querySelector("#cart").classList.toggle("active");
 }
 
 // Get the modal
