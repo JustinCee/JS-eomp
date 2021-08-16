@@ -45,7 +45,12 @@ function searchProduct() {
   );
   console.log(foundProducts);
 
-  showProducts(foundProducts);
+  if (foundProducts.length == 0) {
+    document.querySelector("#project-container").innerHTML =
+      "<h3>Unfortunately we dont have the product you are searching for</h3>";
+  } else {
+    showProducts(foundProducts);
+  }
 }
 
 // Get the modal

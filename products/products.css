@@ -208,3 +208,23 @@ input[type="submit"]:hover {
   cursor: pointer;
   outline: none;
 }
+
+#cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: #2691d9;
+}
+
+#cart.active {
+}
+
+#cart-btn {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 10;
+}
