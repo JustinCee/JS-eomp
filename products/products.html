@@ -14,7 +14,11 @@
   <body>
     <div class="header">
       <h1>Welcome to our products</h1>
-      <button id="myBtn">Add Products</button>
+      <div class="buttons">
+        <button id="myBtn">Add Products</button>
+        <div id="cart">Your cart is empty.</div>
+        <button onclick="openCart()" id="cart-btn">Cart</button>
+      </div>
     </div>
     <div id="filters">
       <form onsubmit="event.preventDefault(); searchProduct();">
