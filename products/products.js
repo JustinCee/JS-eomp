@@ -36,6 +36,18 @@ function addToCart(id) {
   console.log("These items are in your Cart: ", cart);
 }
 
+function searchProduct() {
+  let searchItem = document.querySelector("#searchItem").value;
+  console.log(searchItem);
+
+  let foundProducts = products.filter((product) =>
+    product.title.toLowerCase().startsWith(searchItem.toLowerCase())
+  );
+  console.log(foundProducts);
+
+  showProducts(foundProducts);
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
