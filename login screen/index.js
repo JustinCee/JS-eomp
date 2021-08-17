@@ -2,7 +2,7 @@ const myDb = window.localStorage;
 const users = window.localStorage;
 
 // login function
-function login() {
+function loggingIn() {
   const username = document.getElementById("username-input").value;
   const password = document.getElementById("password-input").value;
   console.log(username, password);
